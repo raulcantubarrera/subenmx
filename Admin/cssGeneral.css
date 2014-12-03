@@ -1,0 +1,252 @@
+html, body, #map_canvas 
+ { 
+     margin: 0;
+     padding: 0; 
+     height: 100%; 
+     font-family: Trebuchet MS;
+ }
+ #header
+ {
+     width:100%;
+     background-color:#59595B;
+     text-align:center;
+     border-top:2px solid #29a9e1;
+     border-bottom:2px solid #f9691a;
+     box-shadow:0px 2px 3px gray;
+     padding-top:2px;
+
+ }
+ #imgHeader
+ {
+     height:50px;
+
+ }
+ select
+ {
+      background-color: #FCFCFC;
+      border: 1px solid #D3D3D3;
+      box-shadow: 3px 3px 3px #D3D3D3;
+      padding: 6px;
+      color: #4682B4;
+     font-weight: bold;
+ }
+ #map_canvas
+ {
+     background-color: #E5E3DF;
+       box-shadow: 3px 3px 3px #D3D3D3;
+       height: 95%;
+       margin-left: 0%;
+       overflow: hidden;
+       position: relative;
+       width: 100%;
+ }
+ .optRuta {
+       font-family: Roboto;
+       color: #4c4c4c;
+       font-weight: bold;
+   }
+ .btnSelRoute
+ {
+     height: 25px;
+       margin-right: 5px;
+       position: relative;
+       top: 6px;
+cursor:pointer;
+ }
+ #divSelRoutes
+ {
+       position: absolute;
+       left: -225px;
+ }
+ #divRoutes
+ {
+      background-color: rgba(255, 255, 255, 0.4);
+       color: #222;
+       height: 90%;
+       max-height: 90%;
+       max-width: 250px;
+       overflow-y: scroll;
+       padding-y: 10px;
+       position: relative;
+       z-index: 1;
+ }
+ #divOpenRoutes
+ {
+     background-color: rgba(255, 255, 255, 0.7);
+       border-radius: 25px 25px 0 0;
+       cursor: pointer;
+       height: 25px;
+       left: 230px;
+       padding: 10px;
+       position: relative;
+       top: -440px;
+       width: 65px;
+       z-index: 1;
+       transform:rotate(90deg);
+       -ms-transform:rotate(90deg); /* IE 9 */
+       -webkit-transform:rotate(90deg);
+
+       /*display:none;*/
+ }
+ #divOpenRoutes:hover
+ {
+     background-color:#29a9e1;
+     color:white;
+ }
+ #selRoutes
+ {
+     position:relative;
+     margin-left:2%;
+     margin-top:50px;
+     margin-bottom:10px;
+ }
+ #ErrorMsg{
+     background-color: #FCFCFC;
+     border: 1px solid #D3D3D3;
+     bottom: -5px;
+     box-shadow: 3px 3px 3px #D3D3D3;
+     color: #4682B4;
+     font-weight: bold;
+     margin-left: 2%;
+     padding: 3px;
+     position: relative;
+     width: 94.65%;
+ }
+   .contextmenu{
+       background-color: #FCFCFC;
+       box-shadow: 3px 3px 3px #D3D3D3;
+       cursor: pointer;
+       position: relative;
+       visibility: hidden;
+       width: 200px;
+       z-index: 10;
+       color:#4682B4;
+       font-weight: bold;
+    }
+    .contextmenu div{
+      border-bottom: 2px solid gray;
+      padding-left: 5px;
+    }
+    .contextmenu div:hover{
+        border-color:dodgerblue;
+        color:dodgerblue;
+    }
+body{
+	font-family:sans-serif;
+}
+.btnNormal
+{
+    background-color: #eee;
+    border-bottom: 3px solid #eee;
+    box-shadow: 2px 2px 3px lightgray;
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    padding-top: 10px;
+    text-align: center;
+    width: 130px;
+}
+.btnNormal:hover
+{
+    border-color:tomato;
+    color:tomato;
+}
+#ulNewRoute
+{
+    background-color: tomato;
+    box-shadow: 4px 4px 3px lightgray;
+    list-style: none outside none;
+    padding: 20px;
+    width: auto;
+    margin:0;
+}
+#ulNewRoute li
+{
+    margin-bottom:3px;
+    display:table-cell;
+}
+#ulNewRoute span
+{
+    color: #eee;
+    display: inline-table;
+    width: 150px;
+}
+#ulNewRoute input
+{
+    background-color: #eee;
+    border: 1px solid tomato;
+    box-shadow: 2px 2px 3px #a7a7a7 inset;
+    color: dodgerblue;
+    padding: 3px;
+    width: 200px;
+}
+#divEditRoute
+{
+    width: auto;
+    background-color: tomato;
+    padding:0 0 20px 30px;
+}
+#divEditRoute span{
+    color:#eee;
+    margin-right: 5px;
+}
+#selEditRoute
+{
+    width:300px;
+    height: 35px;
+    color:#666;
+    margin-top:20px;
+}
+#ulList{
+	background-color: rgba(30,200,200,0.22);
+    box-shadow: 2px 2px 3px lightgray inset;
+    height: 500px;
+    overflow-y: scroll;
+    padding: 10px 30px;
+    width: 300px;
+}
+#ulList li{
+	display:inline-flex;
+	background-color:#fafafa;
+	width:100%;
+	margin-bottom:5px;
+	box-shadow:2px 2px 3px lightgray;
+	cursor:move;
+	padding:3px;
+        z-index: 1;
+}
+.divLeft{
+	display:inline;
+	padding:10px;
+	font-size:20px;
+	color:dodgerblue;
+	font-weight:bold;
+}
+.divRight{
+	display:inline;
+	color:steelblue;
+	width:100%;
+	border-left:2px solid tomato;
+}
+.divDescription{
+	text-align:center;
+}
+.divLocation{
+	text-align:center;
+}
+.divDeleteWayPoint
+{
+    background-color:lightgray;
+    color:tomato;
+    width:10px;
+    height:20px;
+    padding:0px 5px;
+    cursor:pointer;
+}
+.divDeleteWayPoint:hover
+{
+    background-color:tomato;
+    color:lightgray;
+}

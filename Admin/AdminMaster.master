@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <script src="/js/jquery-1.11.1.js"></script>
+    <style>
+        #menu {
+            height: 100%;
+            position: absolute;
+            width: auto;
+            z-index: 2;
+        }
+        body {
+            margin:0;
+            padding:0;
+            font-family:sans-serif;
+        }
+        #ulMenu {
+            background-color: rgba(135, 206, 250, 0.5);
+            height: 100%;
+            list-style: none outside none;
+            margin: 0;
+            padding: 20px;
+            width: 200px;
+        }
+            #ulMenu li {
+                background-color: tomato;
+                border-radius: 3px;
+                color: #eee;
+                display: inline-table;
+                margin-bottom: 20px;
+                padding: 10px;
+                width: 180px;
+                cursor:pointer;
+            }
+        #spanError {
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <div id="menu">
+            <ul id="ulMenu" runat="server" vid="ulMenu"></ul>
+            <span id="spanError" runat="server"></span>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+<script>
+    $().ready(function () {
+        fnMenuEvents();
+    });
+    function fnMenuEvents() {
+        $("ul[vid='ulMenu'] li").click(function () {
+            window.location = $(this).attr("link");
+        });
+    }
+</script>
+</html>
